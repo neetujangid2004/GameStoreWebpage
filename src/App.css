@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+@import url('https://db.onlinewebfonts.com/c/22cf8895a5e62e769d64a3aef492623e?family=KCC-Ganpan');
+@import url('https://db.onlinewebfonts.com/c/40b9a3649fd5d8941b992d0692054bb3?family=Bauhaus+93+W00+Regular');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary: #0d171f;
+  --second: #0998a8;
+  --bgColor: #192938;
+}
+
+h1, h2, h3, p {
+  color: #ffffff;
+}
+
+body {
+  position: relative;
+  background: var(--bgColor);
+  font-family: 'Roboto', sans-serif;
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+}
