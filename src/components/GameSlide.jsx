@@ -19,8 +19,13 @@ function GameSlide({ game, active, toggleVideo }) {
         <h2>{game.title}</h2>
         <p>{game.description}</p>
         <div className="buttons">
-          <a href="#" className="orderBtn">
-            Order Now
+          <a
+            href={game.playNow}
+            className="orderBtn"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Play Now
           </a>
           <a
             href="#"

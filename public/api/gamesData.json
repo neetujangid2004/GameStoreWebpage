@@ -10,7 +10,8 @@
     "price": 49.0,
     "img": "./assets/games/ticTacToe.jpeg",
     "trailer": "https://www.youtube.com/embed/UiieduvtjiI",
-    "active": true
+    "active": true,
+    "playNow": "https://poki.com/en/g/tictactoe"
   },
   {
     "_id": 2,
@@ -23,7 +24,8 @@
     "price": 39.0,
     "img": "./assets/games/rockPaperScissors.jpeg",
     "trailer": "https://www.youtube.com/embed/GTFCH5b_jk4",
-    "active": true
+    "active": true,
+    "playNow": "https://rockpaperscissors-ai.vercel.app/"
   },
   {
     "_id": 3,
@@ -36,7 +38,8 @@
     "price": 59.0,
     "img": "./assets/games/memoryMatch.jpeg",
     "trailer": "https://www.youtube.com/embed/uBYklnv176c",
-    "active": true
+    "active": true,
+    "playNow": "https://memorymatching.com/"
   },
   {
     "_id": 4,
@@ -49,7 +52,8 @@
     "price": 29.0,
     "img": "./assets/games/catchTheBall.jpeg",
     "trailer": "https://www.youtube.com/embed/WILZDMVCNZU",
-    "active": true
+    "active": true,
+    "playNow": "https://www.gameflare.com/online-game/catch-the-ball/"
   },
   {
     "_id": 5,
@@ -62,7 +66,8 @@
     "price": 49.0,
     "img": "./assets/games/colorSwitch.jpeg",
     "trailer": "https://www.youtube.com/embed/25H5xtf9VjI",
-    "active": true
+    "active": true,
+    "playNow": "https://color.method.ac/"
   },
   {
     "_id": 6,
@@ -75,7 +80,8 @@
     "price": 35.0,
     "img": "./assets/games/guessTheNumber.jpeg",
     "trailer": "https://www.youtube.com/embed/E-Voff821tE",
-    "active": true
+    "active": true,
+    "playNow": "https://www.mathsisfun.com/games/guess_number.html"
   },
   {
     "_id": 7,
@@ -83,12 +89,13 @@
     "description": "Control the snake, eat food, and grow longer—but don’t hit the walls or yourself!",
     "level": "Median",
     "category": "Classic",
-    "rating": 5,
+    "rating": 3,
     "discount": 0.3,
     "price": 69.0,
     "img": "./assets/games/snakeGame.jpeg",
     "trailer": "https://www.youtube.com/embed/O3qG-XayCHI",
-    "active": true
+    "active": true,
+    "playNow": "https://snake.io/"
   },
   {
     "_id": 8,
@@ -101,6 +108,7 @@
     "price": 59.0,
     "img": "./assets/games/typingSpeedTest.jpeg",
     "trailer": "https://www.youtube.com/embed/27C31pvjK38",
-    "active": true
+    "active": true,
+    "playNow": "https://zty.pe/"
   }
 ]

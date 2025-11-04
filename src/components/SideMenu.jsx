@@ -33,22 +33,41 @@ function SideMenu({ active, sectionActive }) {
       </ul>
       <ul className="social">
         <li>
-          <a href="#">
+          <a
+            href="https://www.facebook.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <i className="bi bi-meta"></i>
           </a>
         </li>
         <li>
-          <a href="#">
+          <a
+            href="https://twitter.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <i className="bi bi-twitter-x"></i>
           </a>
         </li>
         <li>
-          <a href="#">
+          <a
+            href="https://www.youtube.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <i className="bi bi-youtube"></i>
           </a>
         </li>
         <li>
-          <a href="#" className="share">
+          <a
+            href="#"
+            className="share"
+            onClick={(e) => {
+              e.preventDefault();
+              alert("Sharing is not supported in your browser 😢");
+            }}
+          >
             <i className="bi bi-share"></i>
           </a>
         </li>

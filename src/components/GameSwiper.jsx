@@ -27,7 +27,7 @@ function GameSwiper({ games }) {
       grabCursor={true}
       navigation={true}
       loop={true}
-      centerdSlides={true}
+      // centerdSlides={true}
       slidesPerView={"auto"}
       coverflowEffect={{
         rotate: 35,
@@ -43,16 +43,18 @@ function GameSwiper({ games }) {
       modules={[EffectCoverflow, Navigation, Autoplay]}
       className="gameSwiper"
     >
-      {games.map((game) => (
-        <SwiperSlide key={game._id}>
-          <GameSlide
-            key={game._id}
-            game={game}
-            active={active}
-            toggleVideo={handleToggleVideo}
-          />
-        </SwiperSlide>
-      ))}
+      <>
+        {games.map((game) => (
+          <SwiperSlide key={game._id}>
+            <GameSlide
+              key={game._id}
+              game={game}
+              active={active}
+              toggleVideo={handleToggleVideo}
+            />
+          </SwiperSlide>
+        ))}
+      </>
     </Swiper>
   );
 }

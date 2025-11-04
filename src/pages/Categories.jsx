@@ -55,7 +55,7 @@ function Categories({ games, reference }) {
           </div>
           <div className="col-lg-4 d-flex align-items-center justify-content-end">
             <div className="search">
-              <i class="bi bi-search"></i>
+              <i className="bi bi-search"></i>
               <input
                 type="text"
                 name="search"

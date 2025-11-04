@@ -49,7 +49,7 @@ function Bag({ games, reference }) {
               </table>
             </div>
           </div>
-          <div className="row d-flex justify-content-between mt-5">
+          <div className="row d-flex justify-content-between mt-5 row-second">
             <div className="col-lg-2 d-flex align-items-center">
               <p className="itemCount">Total Items: {games.length}</p>
             </div>

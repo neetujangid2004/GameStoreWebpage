@@ -13,7 +13,7 @@ function GameRating({ rating }) {
       stars.push(i);
     }
 
-    return starts;
+    return stars;
   };
 
   useEffect(() => {
