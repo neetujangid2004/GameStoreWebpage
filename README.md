@@ -66,23 +66,28 @@ npm install
 npm run dev
 Now visit 👉 https://neetujangid2004.onrender.com/# in your browser.
 
-🖼️ Screenshot
-Below is the preview of the PLAY Games Store homepage
+---
+
+## 🖼️ Screenshot
+Below is the preview of the **PLAY Games Store** homepage:
+
 ![App Screenshot](./Screenshot.png)
 
-🌍 Deployment
+---
+
+## 🌍 Deployment
 You can host your project for free on:
 
-GitHub Pages → npm run build → push the /dist folder
+- **GitHub Pages** → `npm run build` → push the `/dist` folder  
+- **Vercel** → import your GitHub repository → auto-deploy  
+- **Netlify** → drag and drop your build folder or connect your GitHub repo  
+- **Render** → connect GitHub repo → set build command `npm run build` and publish folder `dist` → live automatically  
 
-Vercel → import your GitHub repository → auto-deploy
+---
 
-Netlify → drag and drop your build folder or connect your GitHub repo
+## 🧑‍💻 Author
+**Neetu Jangid**  
+📧 *Open to collaboration and feedback!*  
+🌐 [Portfolio](https://neetujangid2004.github.io/Portfolio/#)
 
-Render → connect GitHub repo → set build command npm run build and publish folder dist → live automatically
-You can host your project for free on:
-
-🧑‍💻 Author
-Neetu Jangid
-📧 Open to collaboration and feedback!
-
+---
