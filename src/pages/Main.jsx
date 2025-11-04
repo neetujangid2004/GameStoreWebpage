@@ -45,13 +45,23 @@ function Main() {
     setActive(!active);
   };
 
+  // const handleSectionActive = (target) => {
+  //   sections.map((section) => {
+  //     section.ref.current.classList.remove("active");
+  //     if (section.ref.current.id === target) {
+  //       section.ref.current.classList.add("active");
+  //     }
+  //     return section;
+  //   });
+  // };
   const handleSectionActive = (target) => {
-    sections.map((section) => {
-      section.ref.current.classList.remove("active");
-      if (section.ref.current.id === target) {
-        section.ref.current.classList.add("active");
+    sections.forEach((section) => {
+      const el = section.ref.current;
+      if (!el) return;
+      el.classList.remove("active");
+      if (el.id === target) {
+        el.classList.add("active");
       }
-      return section;
     });
   };
 
