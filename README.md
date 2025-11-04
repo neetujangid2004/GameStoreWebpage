@@ -65,6 +65,7 @@ npm install
 # 4️⃣ Start the development server
 npm run dev
 Now visit 👉 https://neetujangid2004.onrender.com/# in your browser.
+```
 
 ---
 
