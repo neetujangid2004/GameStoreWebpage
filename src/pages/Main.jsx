@@ -13,65 +13,40 @@ function Main() {
   const [active, setActive] = useState(false);
   const [games, setGames] = useState([]);
 
-  const homeRef = useRef();
-  const categoriesRef = useRef();
-  const libraryRef = useRef();
-  const bagRef = useRef();
+  // ✅ Define refs
+  const homeRef = useRef(null);
+  const categoriesRef = useRef(null);
+  const libraryRef = useRef(null);
+  const bagRef = useRef(null);
 
-  const sections = [
-    {
-      name: "home",
-      ref: homeRef,
-      active: true,
-    },
-    {
-      name: "categories",
-      ref: categoriesRef,
-      active: false,
-    },
-    {
-      name: "library",
-      ref: libraryRef,
-      active: false,
-    },
-    {
-      name: "bag",
-      ref: bagRef,
-      active: false,
-    },
-  ];
-
+  // ✅ Toggle side menu
   const handelToggleActive = () => {
     setActive(!active);
   };
 
-  // const handleSectionActive = (target) => {
-  //   sections.map((section) => {
-  //     section.ref.current.classList.remove("active");
-  //     if (section.ref.current.id === target) {
-  //       section.ref.current.classList.add("active");
-  //     }
-  //     return section;
-  //   });
-  // };
+  // ✅ Handle section switching
   const handleSectionActive = (target) => {
-    sections.forEach((section) => {
-      const el = section.ref.current;
-      if (!el) return;
-      el.classList.remove("active");
-      if (el.id === target) {
-        el.classList.add("active");
-      }
+    const allSections = [homeRef, categoriesRef, libraryRef, bagRef];
+    allSections.forEach((ref) => {
+      if (ref.current) ref.current.classList.remove("active");
     });
+
+    const targetRef = {
+      home: homeRef,
+      categories: categoriesRef,
+      library: libraryRef,
+      bag: bagRef,
+    }[target];
+
+    if (targetRef?.current) targetRef.current.classList.add("active");
   };
 
+  // ✅ Fetch game data
   const fetchData = () => {
     fetch("http://localhost:3000/api/gamesData.json")
       .then((res) => res.json())
-      .then((data) => {
-        setGames(data);
-      })
-      .catch((e) => console.log(e.message));
+      .then((data) => setGames(data))
+      .catch((e) => console.error(e.message));
   };
 
   useEffect(() => {
@@ -81,7 +56,7 @@ function Main() {
   return (
     <main>
       <SideMenu active={active} sectionActive={handleSectionActive} />
-      <div className={`banner ${active ? "active" : undefined}`}>
+      <div className={`banner ${active ? "active" : ""}`}>
         <Header toggleActive={handelToggleActive} />
         <div className="container-fluid">
           {games && games.length > 0 && (
