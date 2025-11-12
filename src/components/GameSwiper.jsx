@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-// Import Swiper React components
+// Import swiper react components
 import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
@@ -10,7 +10,7 @@ import "swiper/css/navigation";
 
 import "./gameSwiper.css";
 
-// Import required modules
+// import required modules
 import { EffectCoverflow, Navigation, Autoplay } from "swiper/modules";
 import GameSlide from "./GameSlide";
 
@@ -27,10 +27,8 @@ function GameSwiper({ games }) {
       grabCursor={true}
       navigation={true}
       loop={true}
+      centerdSlides={true}
       slidesPerView={"auto"}
-      // 🧩 Alternative way to center slides without centeredSlides
-      slidesOffsetBefore={window.innerWidth / 4}
-      slidesOffsetAfter={window.innerWidth / 4}
       coverflowEffect={{
         rotate: 35,
         stretch: 200,
@@ -45,16 +43,18 @@ function GameSwiper({ games }) {
       modules={[EffectCoverflow, Navigation, Autoplay]}
       className="gameSwiper"
     >
-      {games.map((game) => (
-        <SwiperSlide key={game._id}>
-          <GameSlide
-            key={game._id}
-            game={game}
-            active={active}
-            toggleVideo={handleToggleVideo}
-          />
-        </SwiperSlide>
-      ))}
+      <>
+        {games.map((game) => (
+          <SwiperSlide key={game._id}>
+            <GameSlide
+              key={game._id}
+              game={game}
+              active={active}
+              toggleVideo={handleToggleVideo}
+            />
+          </SwiperSlide>
+        ))}
+      </>
     </Swiper>
   );
 }
