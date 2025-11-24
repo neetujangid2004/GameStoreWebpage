@@ -6,6 +6,12 @@ import { AppContext } from "../App";
 function GameCard({ game }) {
   const { library, setLibrary, bag, setBag } = useContext(AppContext);
 
+  const openPlayNow = () => {
+    if (game.playNow) {
+      window.open(game.playNow, "_blank"); // open in new tab
+    }
+  };
+
   const handleAddToLibrary = (game) => {
     setLibrary([...library, game]);
   };
@@ -21,7 +27,11 @@ function GameCard({ game }) {
 
   return (
     <div className="col-xl-3 col-lg-4 col-md-6">
-      <div className="gameCard">
+      <div
+        className="gameCard"
+        onDoubleClick={openPlayNow}
+        style={{ cursor: "pointer" }}
+      >
         <img src={game.img} alt={game.title} className="img-fluid" />
         <a
           href="#"

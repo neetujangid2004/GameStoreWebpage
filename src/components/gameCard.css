@@ -11,6 +11,11 @@
     5px 5px 15px rgba(0, 0, 0, 0.35);
 }
 
+.gameCard:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.4);
+}
+
 .gameCard img {
   border-radius: 20px;
   margin-bottom: 15px;
@@ -18,6 +23,7 @@
   object-position: 50%;
   width: 100%;
 }
+
 .gameCard .like {
   position: absolute;
   top: 24px;
