@@ -63,7 +63,7 @@ cd GameStoreWebpage
 npm install
 
 # 4️⃣ Start the development server
-npm run dev
+npm run start
 Now visit 👉 https://neetujangid2004.onrender.com/# in your browser.
 ```
 
