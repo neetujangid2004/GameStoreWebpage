@@ -62,6 +62,16 @@ function GameCard({ game }) {
             ${((1 - game.discount) * game.price).toFixed(2)}
           </span>
         </div>
+
+        {/* <a
+          href={game.orderNow}
+          className="orderNowBtn"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Order Now
+        </a> */}
+
         <a href="#" className="addBag" onClick={() => handleAddBag(game)}>
           <i className="bi bi-bag-plus-fill"></i>
         </a>

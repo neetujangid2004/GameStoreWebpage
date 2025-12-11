@@ -34,16 +34,20 @@ function SideMenu({ active, sectionActive }) {
       <ul className="social">
         <li>
           <a
-            href="https://www.facebook.com"
+            href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(
+              "https://neetujangid2004.onrender.com/#"
+            )}`}
             target="_blank"
             rel="noopener noreferrer"
           >
-            <i className="bi bi-meta"></i>
+            <i className="bi bi-facebook"></i>
           </a>
         </li>
         <li>
           <a
-            href="https://twitter.com"
+            href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(
+              "Check this website: https://neetujangid2004.onrender.com/#"
+            )}`}
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -52,11 +56,13 @@ function SideMenu({ active, sectionActive }) {
         </li>
         <li>
           <a
-            href="https://www.youtube.com"
+            href={`https://wa.me/?text=${encodeURIComponent(
+              "https://neetujangid2004.onrender.com/#"
+            )}`}
             target="_blank"
             rel="noopener noreferrer"
           >
-            <i className="bi bi-youtube"></i>
+            <i className="bi bi-whatsapp"></i>
           </a>
         </li>
         <li>
@@ -65,7 +71,20 @@ function SideMenu({ active, sectionActive }) {
             className="share"
             onClick={(e) => {
               e.preventDefault();
-              alert("Sharing is not supported in your browser 😢");
+
+              const shareData = {
+                title: "Play Games Website",
+                text: "Check this website:",
+                url: "https://neetujangid2004.onrender.com/#",
+              };
+
+              if (navigator.share) {
+                navigator.share(shareData).catch((err) => {
+                  console.log("Share failed:", err);
+                });
+              } else {
+                alert("Your device does not support sharing. 😢");
+              }
             }}
           >
             <i className="bi bi-share"></i>
